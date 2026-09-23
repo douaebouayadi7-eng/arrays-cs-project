@@ -16,6 +16,12 @@ public class CourseNumbersArray {
         }
         System.out.println();
     }
+    public boolean checkCourses(int number){
+        for(course: registeredCourses){
+            if (course== number) return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
 
     }
