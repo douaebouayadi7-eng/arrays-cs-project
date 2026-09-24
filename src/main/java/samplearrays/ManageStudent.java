@@ -7,6 +7,7 @@ public class ManageStudent {
 
     // 2) Find the Oldest Student
     public static Student findOldest(Student[] students) {
+        int maxAge=
         for
 
         return oldest;
@@ -16,7 +17,7 @@ public class ManageStudent {
     public static int countAdults(Student[] students) {
         int count= 0;
         for (Student student: students){
-            if (student[age]>=18){
+            if (student.getAge()>=18){
                 count++;
             }
         }
@@ -25,12 +26,21 @@ public class ManageStudent {
 
     // 4) Average Grade (returns NaN if no students or grades)
     public static double averageGrade(Student[] students) {
-
+        gradeSum= 0;
+        for( Student student: students){
+            gradeSum+=student.getGrade();
+        }
+        return gradeSum/students.length;
     }
 
     // 5) Search by Name (case-sensitive; change to equalsIgnoreCase if desired)
     public static Student findStudentByName(Student[] students, String name) {
 
+        for (Student student: students){
+            if (student.getName().equals(name)){
+                return
+            }
+        }
     }
 
     // 6) Sort Students by Grade (descending)
