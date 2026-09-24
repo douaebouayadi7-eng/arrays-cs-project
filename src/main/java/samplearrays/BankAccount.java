@@ -22,15 +22,15 @@ public class BankAccount {
     }
 
     public void displayTransactions(){
+        System.out.println("Transactions are: ");
         for (double transaction: transactions){
             System.out.println(transaction);
         }
         System.out.println();
-
     }
 
     public void displayBalance(){
-
+        System.out.print("The balance is :"+ currentBalance);
     }
 
     public static void main(String[] args) {
