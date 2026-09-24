@@ -7,13 +7,20 @@ public class ManageStudent {
 
     // 2) Find the Oldest Student
     public static Student findOldest(Student[] students) {
+        for
 
         return oldest;
     }
 
     // 3) Count Adult Students (age >= 18)
     public static int countAdults(Student[] students) {
-
+        int count= 0;
+        for (Student student: students){
+            if (student[age]>=18){
+                count++;
+            }
+        }
+        return count;
     }
 
     // 4) Average Grade (returns NaN if no students or grades)
@@ -68,9 +75,13 @@ public class ManageStudent {
         System.out.println("Total created: " + Student.getNumStudent());
 
         // 2) Oldest
+        System.out.println("The oldest student is: " +ManageStudent.findOldest(arr));
 
 
         // 3) Count adults
+        System.out.println("The oldest student is: " +ManageStudent.findOldest());
+
+
 
 
         // 4) Average grade
