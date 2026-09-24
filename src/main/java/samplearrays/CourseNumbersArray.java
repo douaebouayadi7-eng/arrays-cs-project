@@ -29,6 +29,8 @@ public class CourseNumbersArray {
         student.addCourse(6767);
         System.out.println("\nCourses after adding course 6767");
         student.printCourses();
+        System.out.println("\nDoes it contain course 6767?");
+        System.out.println(student.checkCourses(6767));
 
     }
 }
