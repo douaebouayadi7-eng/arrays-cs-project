@@ -6,6 +6,7 @@ public class BankAccount {
     double currentBalance;
     //TO-DO: Initialize an Array with 1000 in size that stores Double called 'transactions' to keep track of the user's transactions
     double[] transactions= new double[1000];
+    int transactionCount=0;
 
     public BankAccount(String name, int startingBalance){
         this.name=name;
@@ -13,16 +14,26 @@ public class BankAccount {
     }
 
     public void deposit(double amount){
-        currentBalance+=amount;
-
+        if (amount>0) {
+            currentBalance += amount;
+            System.out.println("The depositor: "+name+ "deposited the amount "+amount+" and the new balance is: "+currentBalance);
+            transactions[transactionCount]=amount;
+            transactionCount++;
+        }
+        System.out.println("Error: this amount is invalid and cannot be deposited");
     }
 
     public void withdraw(double amount){
-        currentBalance-=amount;
+        if (amount<=currentBalance) {
+            currentBalance -= amount;
+            System.out.println("The depositor: "+name+ "withdrew the amount "+amount+" and the new balance is: "+currentBalance);
+        }
+        System.out.println("Error: this amount is invalid and cannot be withdrew");
+
     }
 
     public void displayTransactions(){
-        System.out.println("Transactions are: ");
+        System.out.println("All transactions are: ");
         for (double transaction: transactions){
             System.out.println(transaction);
         }
