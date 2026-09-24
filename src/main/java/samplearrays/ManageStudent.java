@@ -69,19 +69,25 @@ public class ManageStudent {
     }
 
     // 8) Update Student Grade by id
-    public static boolean updateGrade(Student[] students, int id, int newGrade) {
-
-
-
+    public static void updateGrade(Student[] students, int id, int newGrade) {
+        for (Student student: students){
+            if (student.getId()==id){
+                student.setGrade(newGrade);
+            }
+        }
     }
-
     // 9) Find Duplicate Names
     public static boolean hasDuplicateNames(Student[] students) {
+
 
     }
 
     // 10) Expandable Array: return a new array with one more slot and append student
     public static Student[] appendStudent(Student[] students, Student newStudent) {
+        Student[] newStudents= new Student[students.length+1];
+        newStudents[students.length]= newStudent;
+        return newStudents;
+
 
     }
 
