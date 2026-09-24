@@ -22,6 +22,10 @@ public class BankAccount {
     }
 
     public void displayTransactions(){
+        for (double transaction: transactions){
+            System.out.println(transaction);
+        }
+        System.out.println();
 
     }
 
