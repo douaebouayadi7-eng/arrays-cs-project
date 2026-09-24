@@ -7,8 +7,8 @@ public class ManageStudent {
 
     // 2) Find the Oldest Student
     public static Student findOldest(Student[] students) {
-        int maxAge=
-        for
+        int maxAge=0;
+        for()
 
         return oldest;
     }
@@ -36,15 +36,18 @@ public class ManageStudent {
     // 5) Search by Name (case-sensitive; change to equalsIgnoreCase if desired)
     public static Student findStudentByName(Student[] students, String name) {
 
-        for (Student student: students){
-            if (student.getName().equals(name)){
-                return
+        for (Student student : students) {
+            if (student.getName().equals(name)) {
+                return student;
+            }else{
+                return null;
             }
         }
     }
 
     // 6) Sort Students by Grade (descending)
     public static void sortByGradeDesc(Student[] students) {
+
 
     }
 
