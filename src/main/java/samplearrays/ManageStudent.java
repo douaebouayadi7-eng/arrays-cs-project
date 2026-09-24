@@ -54,6 +54,12 @@ public class ManageStudent {
     // 1) Create an Array of Students + demos for all tasks
     public static void main(String[] args) {
         // Create & initialize array of 5 students
+        Student[] arr= new Student[5];
+        arr[0]= new Student(1, "Aya", 18, 18);
+        arr[1]= new Student(2, "Douae", 19, 19);
+        arr[2]= new Student(3, "Malak", 20, 15);
+        arr[3]= new Student(4, "Karima", 17, 16);
+        arr[4]= new Student(5, "Bilal", 16, 17);
 
 
         // Print all
