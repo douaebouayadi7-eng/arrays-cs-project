@@ -8,9 +8,15 @@ public class ManageStudent {
     // 2) Find the Oldest Student
     public static Student findOldest(Student[] students) {
         int maxAge=0;
-        for()
+        Student oldestStudent= new Student();
+        for(Student student: students){
+            if (student.getAge()>maxAge){
+                maxAge=student.getAge();
+                oldestStudent=student;
+            }
+        }
 
-        return oldest;
+        return oldestStudent;
     }
 
     // 3) Count Adult Students (age >= 18)
