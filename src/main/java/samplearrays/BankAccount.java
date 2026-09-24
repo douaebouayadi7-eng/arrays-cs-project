@@ -18,7 +18,7 @@ public class BankAccount {
     }
 
     public void withdraw(double amount){
-
+        currentBalance-=amount;
     }
 
     public void displayTransactions(){
