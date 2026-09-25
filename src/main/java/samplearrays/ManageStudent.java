@@ -52,11 +52,7 @@ public class ManageStudent {
 
     // 6) Sort Students by Grade (descending)
     public static void sortByGradeDesc(Student[] students) {
-
-
-
-
-
+        Arrays.sort(students, (a, b) -> b.getGrade() - a.getGrade());
     }
 
     // 7) Print High Achievers (grade >= 15)
