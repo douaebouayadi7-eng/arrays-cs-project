@@ -93,6 +93,47 @@ public class ManageStudent {
         newStudents[students.length]= newStudent;
         return newStudents;
     }
+    // 11) Create Student[][] : 2 classes (rows) x 3 students per class (columns)
+    public static Student[][] create2DArray() {
+        Student[][] classes = new Student[2][3];
+
+        classes[0][0] = new Student(101, "Yassine", 18, 17);
+        classes[0][1] = new Student(102, "Salma", 19, 14);
+        classes[0][2] = new Student(103, "Omar", 17, 19);
+
+        classes[1][0] = new Student(201, "Imane", 20, 12);
+        classes[1][1] = new Student(202, "Hamza", 18, 16);
+        classes[1][2] = new Student(203, "Nour", 19, 20);
+
+        return classes;
+    }
+
+    // Print names of all students, class by class
+    public static void printByClass(Student[][] classes) {
+        for (int i = 0; i < classes.length; i++) {
+            System.out.println("Class " + (i + 1) + ":");
+            for (int j = 0; j < classes[i].length; j++) {
+                System.out.println("  " + classes[i][j].getName());
+            }
+        }
+    }
+
+    // Question: Find the Top Student in Each Class
+    public static Student[] findTopStudentInEachClass(Student[][] classes) {
+        Student[] topStudents = new Student[classes.length];
+
+        for (int i = 0; i < classes.length; i++) {
+            Student top = classes[i][0];
+            for (int j = 1; j < classes[i].length; j++) {
+                if (classes[i][j].getGrade() > top.getGrade()) {
+                    top = classes[i][j];
+                }
+            }
+            topStudents[i] = top;
+        }
+
+        return topStudents;
+    }
 
 
     // 1) Create an Array of Students + demos for all tasks
@@ -101,7 +142,7 @@ public class ManageStudent {
         Student[] arr= new Student[5];
         arr[0]= new Student(1, "Aya", 18, 18);
         arr[1]= new Student(2, "Douae", 19, 19);
-        arr[2]= new Student(3, "Malak", 20, 15);
+        arr[2]= new Student(3, "Malak", 20, 14);
         arr[3]= new Student(4, "Karima", 17, 16);
         arr[4]= new Student(5, "Bilal", 16, 17);
 
@@ -116,7 +157,7 @@ public class ManageStudent {
 
 
         // 3) Count adults
-        System.out.println("The oldest student is: " +ManageStudent.countAdults(arr));
+        System.out.println("The number of adults is: " +ManageStudent.countAdults(arr));
 
 
 
@@ -133,6 +174,7 @@ public class ManageStudent {
 
         // 6) Sort by grade desc
         // sort function
+        sortByGradeDesc(arr);
         System.out.println("\n== Sorted by grade (desc) ==");
         for (Student s : arr) System.out.println(s);
 
