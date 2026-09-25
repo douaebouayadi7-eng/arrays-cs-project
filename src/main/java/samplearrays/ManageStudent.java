@@ -94,6 +94,7 @@ public class ManageStudent {
         return newStudents;
     }
 
+
     // 1) Create an Array of Students + demos for all tasks
     public static void main(String[] args) {
         // Create & initialize array of 5 students
@@ -115,7 +116,7 @@ public class ManageStudent {
 
 
         // 3) Count adults
-        System.out.println("The oldest student is: " +ManageStudent.findOldest());
+        System.out.println("The oldest student is: " +ManageStudent.countAdults(arr));
 
 
 
@@ -126,7 +127,7 @@ public class ManageStudent {
 
 
         // 5) Find by name
-        System.out.println("The name of the student with id: " +ManageStudent.averageGrade(arr));
+        System.out.println("The student with the name: Aya ia " +ManageStudent.findStudentByName(arr, "Aya"));
 
 
 
@@ -141,13 +142,17 @@ public class ManageStudent {
 
         // 8) Update grade by id
         // function
-        System.out.println("\nUpdated id=4? " + updated);
-        System.out.println(findStudentByName(arr, "Dina"));
+        updateGrade(arr, 4, 20);
+        System.out.println("\nUpdated id=4: " + findStudentByName(arr, "Karima"));
 
         // 9) Duplicate names
+        System.out.println("\nDuplicates found? " + hasDuplicateNames(arr));
 
 
         // 10) Append new student
+        Student[] biggerArr = appendStudent(arr, new Student(6, "Dina", 18, 12));
+        System.out.println("\n== After appending ==");
+        for (Student s : biggerArr) System.out.println(s);
 
     }
 }
