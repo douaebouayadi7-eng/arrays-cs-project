@@ -32,7 +32,7 @@ public class ManageStudent {
 
     // 4) Average Grade (returns NaN if no students or grades)
     public static double averageGrade(Student[] students) {
-        gradeSum= 0;
+        double gradeSum= 0;
         for( Student student: students){
             gradeSum+=student.getGrade();
         }
@@ -45,14 +45,14 @@ public class ManageStudent {
         for (Student student : students) {
             if (student.getName().equals(name)) {
                 return student;
-            }else{
-                return null;
             }
         }
+        return null;
     }
 
     // 6) Sort Students by Grade (descending)
     public static void sortByGradeDesc(Student[] students) {
+
 
 
 
@@ -85,10 +85,11 @@ public class ManageStudent {
     // 10) Expandable Array: return a new array with one more slot and append student
     public static Student[] appendStudent(Student[] students, Student newStudent) {
         Student[] newStudents= new Student[students.length+1];
+        for (int i=0;i<students.length; i++){
+            newStudents[i]=students[i];
+        }
         newStudents[students.length]= newStudent;
         return newStudents;
-
-
     }
 
     // 1) Create an Array of Students + demos for all tasks
@@ -118,9 +119,13 @@ public class ManageStudent {
 
 
         // 4) Average grade
+        System.out.println("The average grade is: " +ManageStudent.averageGrade(arr));
+
 
 
         // 5) Find by name
+        System.out.println("The name of the student with id: " +ManageStudent.averageGrade(arr));
+
 
 
         // 6) Sort by grade desc
